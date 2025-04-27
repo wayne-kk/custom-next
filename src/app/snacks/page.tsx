@@ -61,7 +61,7 @@ export default function SnacksPage({ searchParams }: SnacksPageProps) {
                 <div>
                   <Link 
                     href={`/snacks${category ? `?category=${category}` : ''}`}
-                    className={`block px-4 py-2 rounded-md transition-colors ${!petType ? 'bg-secondary text-white' : 'hover:bg-gray-100'}`}
+                    className={`block px-4 py-2 rounded-md transition-colors ${!petType ? 'bg-secondary text-white font-bold' : 'hover:bg-gray-100'}`}
                   >
                     All Pets
                   </Link>
@@ -69,7 +69,7 @@ export default function SnacksPage({ searchParams }: SnacksPageProps) {
                 <div>
                   <Link 
                     href={`/snacks?petType=dog${category ? `&category=${category}` : ''}`}
-                    className={`block px-4 py-2 rounded-md transition-colors ${petType === 'dog' ? 'bg-secondary text-white' : 'hover:bg-gray-100'}`}
+                    className={`block px-4 py-2 rounded-md transition-colors ${petType === 'dog' ? 'bg-secondary text-white font-bold' : 'hover:bg-gray-100'}`}
                   >
                     Dogs 🐶
                   </Link>
@@ -77,7 +77,7 @@ export default function SnacksPage({ searchParams }: SnacksPageProps) {
                 <div>
                   <Link 
                     href={`/snacks?petType=cat${category ? `&category=${category}` : ''}`}
-                    className={`block px-4 py-2 rounded-md transition-colors ${petType === 'cat' ? 'bg-secondary text-white' : 'hover:bg-gray-100'}`}
+                    className={`block px-4 py-2 rounded-md transition-colors ${petType === 'cat' ? 'bg-secondary text-white font-bold' : 'hover:bg-gray-100'}`}
                   >
                     Cats 🐱
                   </Link>
@@ -85,7 +85,7 @@ export default function SnacksPage({ searchParams }: SnacksPageProps) {
                 <div>
                   <Link 
                     href={`/snacks?petType=both${category ? `&category=${category}` : ''}`}
-                    className={`block px-4 py-2 rounded-md transition-colors ${petType === 'both' ? 'bg-secondary text-white' : 'hover:bg-gray-100'}`}
+                    className={`block px-4 py-2 rounded-md transition-colors ${petType === 'both' ? 'bg-secondary text-white font-bold' : 'hover:bg-gray-100'}`}
                   >
                     Both 🐶🐱
                   </Link>
@@ -105,7 +105,7 @@ export default function SnacksPage({ searchParams }: SnacksPageProps) {
                       ...(category ? { category } : {}),
                       sort: 'rating'
                     }).toString()}`}
-                    className={`block px-4 py-2 rounded-md transition-colors ${sort === 'rating' ? 'bg-secondary text-white' : 'hover:bg-gray-100'}`}
+                    className={`block px-4 py-2 rounded-md transition-colors ${sort === 'rating' ? 'bg-secondary text-white font-bold' : 'hover:bg-gray-100'}`}
                   >
                     Highest Rated
                   </Link>
@@ -117,7 +117,7 @@ export default function SnacksPage({ searchParams }: SnacksPageProps) {
                       ...(category ? { category } : {}),
                       sort: 'price-low'
                     }).toString()}`}
-                    className={`block px-4 py-2 rounded-md transition-colors ${sort === 'price-low' ? 'bg-secondary text-white' : 'hover:bg-gray-100'}`}
+                    className={`block px-4 py-2 rounded-md transition-colors ${sort === 'price-low' ? 'bg-secondary text-white font-bold' : 'hover:bg-gray-100'}`}
                   >
                     Price: Low to High
                   </Link>
@@ -129,7 +129,7 @@ export default function SnacksPage({ searchParams }: SnacksPageProps) {
                       ...(category ? { category } : {}),
                       sort: 'price-high'
                     }).toString()}`}
-                    className={`block px-4 py-2 rounded-md transition-colors ${sort === 'price-high' ? 'bg-secondary text-white' : 'hover:bg-gray-100'}`}
+                    className={`block px-4 py-2 rounded-md transition-colors ${sort === 'price-high' ? 'bg-secondary text-white font-bold' : 'hover:bg-gray-100'}`}
                   >
                     Price: High to Low
                   </Link>

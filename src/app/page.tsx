@@ -1,103 +1,97 @@
+import HeroSection from "@/components/HeroSection";
+import FeaturedSnacks from "@/components/FeaturedSnacks";
+import CategoryShowcase from "@/components/CategoryShowcase";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <HeroSection />
+      
+      <FeaturedSnacks />
+      
+      <section className="py-16 bg-cream">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="md:w-1/2 relative">
+              <div className="relative h-64 md:h-80 w-full">
+                <Image 
+                  src="/images/happy-pets.png" 
+                  alt="Happy pets enjoying treats" 
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 animate-wiggle hidden md:block">
+                <Image 
+                  src="/images/paw-print.png" 
+                  alt="Paw print" 
+                  width={50}
+                  height={50}
+                />
+              </div>
+            </div>
+            
+            <div className="md:w-1/2">
+              <h2 className="font-bubblegum text-3xl text-primary-dark mb-4">Why Choose Our Treats?</h2>
+              <div className="space-y-4 font-comfortaa">
+                <div className="flex items-start">
+                  <div className="bg-secondary-light p-2 rounded-full mr-3 text-xl">🌟</div>
+                  <div>
+                    <h3 className="font-bubblegum text-xl text-secondary-dark">Premium Quality</h3>
+                    <p className="text-gray-700">We carefully select only the highest quality ingredients for our treats.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-secondary-light p-2 rounded-full mr-3 text-xl">🌱</div>
+                  <div>
+                    <h3 className="font-bubblegum text-xl text-secondary-dark">Natural Ingredients</h3>
+                    <p className="text-gray-700">No artificial preservatives, colors, or flavors - just wholesome goodness.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-secondary-light p-2 rounded-full mr-3 text-xl">❤️</div>
+                  <div>
+                    <h3 className="font-bubblegum text-xl text-secondary-dark">Pet-Approved Taste</h3>
+                    <p className="text-gray-700">Delicious flavors that even the pickiest pets can't resist!</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-secondary-light p-2 rounded-full mr-3 text-xl">🔍</div>
+                  <div>
+                    <h3 className="font-bubblegum text-xl text-secondary-dark">Carefully Tested</h3>
+                    <p className="text-gray-700">All our treats undergo rigorous quality and safety testing.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      
+      <CategoryShowcase />
+      
+      <section className="py-16 bg-gradient-to-r from-secondary-light to-primary-light">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-bubblegum text-3xl text-primary-dark mb-4">Ready to Treat Your Pet?</h2>
+          <p className="font-comfortaa text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+            Explore our collection of delicious, healthy treats that your furry friends will love!
+          </p>
+          <Link 
+            href="/snacks" 
+            className="bg-primary hover:bg-primary-dark text-white font-bubblegum py-3 px-8 rounded-full text-lg transition-colors inline-flex items-center justify-center"
+          >
+            Browse All Treats
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

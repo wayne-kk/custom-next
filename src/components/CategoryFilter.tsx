@@ -28,7 +28,7 @@ export default function CategoryFilter({ selectedCategory, petType }: CategoryFi
           href={getAllUrl()}
           className={`px-4 py-2 rounded-full font-comfortaa text-sm transition-colors ${
             !selectedCategory 
-              ? 'bg-secondary text-white font-bold' 
+              ? 'bg-secondary-dark text-white font-bold' 
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
@@ -41,7 +41,7 @@ export default function CategoryFilter({ selectedCategory, petType }: CategoryFi
             href={getFilterUrl(category)}
             className={`px-4 py-2 rounded-full font-comfortaa text-sm transition-colors ${
               selectedCategory === category 
-                ? 'bg-secondary text-white font-bold' 
+                ? 'bg-secondary-dark text-white font-bold' 
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >

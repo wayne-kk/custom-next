@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Active link styles */
 .active-link {
-  background-color: #A5DEF8 !important;
+  background-color: #7BBFE0 !important; /* secondary-dark */
   color: white !important;
   font-weight: bold !important;
 }
